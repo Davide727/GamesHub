@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - GamesHub</title>
+
+    <meta name="description" content="Registrati per creare il tuo account su GamesHub e salvare i tuoi punteggi e preferenze.">
+    <meta name="keywords" content="Registrazione, Signup, GamesHub, utente, punteggi, account">
+    <meta name="author" content="Gruppo Sapienza DIAG">
+
+    <link rel="icon" href="immagini/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="immagini/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="login-title">Registrati</h2>
+
+        <form class="form" id="registerForm">
+            <div class="flex-column">
+                <label>Username</label>
+            </div>
+            <div class="inputForm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+                    <path d="M30.853 13.87A15 15 0 0 0 1.124 17.952a15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zM16 22a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"/>
+                </svg>
+                <input type="text" name="username" placeholder="Username" class="input" id="username"/>
+                <span class="error" id="usernameError"></span>
+            </div>
+
+            <div class="flex-column">
+                <label>Email</label>
+            </div>
+            <div class="inputForm">
+                <input type="email" name="email" placeholder="Email" class="input" id="email"/>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="flex-column">
+                <label>Password</label>
+            </div>
+            <div class="inputForm">
+                <input type="password" name="password" placeholder="Password" class="input" id="password"/>
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <div class="flex-column">
+                <label>Conferma Password</label>
+            </div>
+            <div class="inputForm">
+                <input type="password" name="confirm_password" placeholder="Password" class="input" id="confirm_password"/>
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+
+            <div class="flex-row">
+                <div>
+                    <input type="checkbox" id="terms" name="terms"/>
+                    <label for="terms">Accetto i <a href="terms.html" class="span">termini e condizioni</a></label>
+                    <span class="error" id="termsError"></span>
+                </div>
+            </div>
+
+            <button class="button-submit" type="button" id="registerButton">Registrati</button>
+
+            <p class="p">Hai già un account? <a href="login.html" class="span">Accedi</a><br>
+            Torna alla home <a href="index.php" class="span">Home</a></p>
+        </form>
+        <script src="register.js"></script>
+    </div>
+</body>
+</html>

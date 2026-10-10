@@ -1,0 +1,218 @@
+/* Reset dei margini e padding predefiniti di tutti gli elementi,
+   e impostazione del modello di box-sizing a 'border-box' per una gestione
+   più intuitiva delle dimensioni degli elementi. 
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+/*
+   Imposta il font principale della pagina.
+   Imposta un'immagine di sfondo fissa e la adatta per coprire l'intera area visibile.
+   Imposta il colore del testo predefinito a bianco.
+   Imposta l'altezza della linea per migliorare la leggibilità del testo. 
+*/
+body {
+  font-family: Arial, sans-serif;
+  background: url('immagini/s_vs_m.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+}
+  
+  /* 
+    Aggiunge un padding superiore e inferiore e laterale.
+    Imposta uno sfondo nero semi-trasparente per garantire la leggibilità del testo
+    sopra l'immagine di sfondo. Allinea il testo al centro.
+    Applica un'animazione in entrata (fade-in) con una durata di 1 secondo. 
+  */
+.about-hero {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  animation: fadeIn 1s forwards;
+}
+  
+/* Contenitore interno per la sezione hero per limitarne la larghezza massima
+   e centrarlo orizzontalmente. */
+.about-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+  
+/* 
+   Imposta una dimensione del font grande.
+   Imposta il colore del testo a giallo brillante.
+   Applica un'ombreggiatura complessa per un effetto visivo.
+   Aggiunge un margine inferiore per separarlo dal sottotitolo. 
+*/
+.about-title {
+  font-size: 4rem;
+  color: #ffbf00;
+  text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #ffbf00, 2px 2px 5px #000;
+  margin-bottom: 20px;
+}
+  
+/*
+   Imposta una dimensione del font leggermente più piccola del titolo.
+   Aggiunge un margine inferiore.
+   Imposta l'opacità iniziale a 0 e lo sposta leggermente verso il basso.
+   Applica un'animazione in entrata (fade-in) con un ritardo di 0.5 secondi. 
+*/
+.about-tagline {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+  
+/*
+   Aggiunge un padding superiore e inferiore e laterale.
+   Imposta uno sfondo nero semi-trasparente, leggermente più opaco della sezione hero.
+   Applica un'animazione in entrata (fade-in) con un ritardo di 0.7 secondi.
+   Imposta questa sezione come flessibile. 
+*/
+.about-diag {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.7s;
+  flex: 1;
+}
+  
+/* 
+   Definisce due colonne di uguale larghezza.
+   Imposta uno spazio (gap) tra le celle della griglia.
+   Limita la larghezza massima del contenitore e lo centra orizzontalmente.
+   Allinea verticalmente gli elementi all'interno delle righe della griglia. 
+*/
+.diag-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+  
+/*
+   L'immagine contenuta occuperà il 100% della larghezza del suo contenitore.
+   Applica un bordo arrotondato.
+   Aggiunge un'ombreggiatura per un effetto di profondità. 
+*/
+.diag-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+  
+/* 
+   Imposta una dimensione del font grande per il titolo.
+   Imposta il colore del titolo a giallo brillante.
+   Aggiunge un margine inferiore sotto il titolo.
+   Applica un'ombreggiatura al testo del titolo. 
+*/
+.diag-info h2 {
+  font-size: 3rem;
+  color: #ffbf00;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000;
+}
+  
+/*
+   Imposta una dimensione del font leggibile.
+   Aggiunge un margine inferiore.
+   Giustifica il testo per una migliore presentazione visiva. 
+*/
+.diag-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+  
+/* 
+   Imposta la larghezza al 100% del suo contenitore.
+   Nasconde eventuali overflow per mantenere la forma desiderata.
+   Aggiunge un bordo di colore giallo brillante.
+   Applica un bordo arrotondato.
+   Aggiunge un'ombreggiatura per un effetto di elevazione. 
+*/
+.map-container {
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #ffbf00;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+  
+/* 
+   Imposta il colore di sfondo a nero.
+   Aggiunge un padding superiore e inferiore.
+   Allinea il testo al centro.
+   Imposta il colore del testo a bianco.
+   Imposta una dimensione del font leggermente più piccola. 
+*/
+footer {
+  background-color: #000;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+}
+  
+/* 
+   All'inizio (from), l'elemento è completamente trasparente (opacity: 0) e
+   spostato verso il basso di 20 pixel (transform: translateY(20px)).
+   Alla fine (to), l'elemento diventa completamente opaco (opacity: 1) e
+   ritorna alla sua posizione originale (transform: translateY(0)).
+   'forwards' fa sì che l'elemento mantenga lo stato finale dell'animazione. 
+*/
+@keyframes fadeIn {
+  from {
+  opacity: 0;
+  transform: translateY(20px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+  
+/* Questa media query si applica agli schermi con una larghezza massima di 768 pixel. */
+@media (max-width: 768px) {
+  /* Riduci la dimensione del font del titolo principale per schermi più piccoli. */
+  .about-title {
+  font-size: 2.5rem;
+  }
+  
+  /* Riduci la dimensione del font del sottotitolo per schermi più piccoli. */
+  .about-tagline {
+  font-size: 1.2rem;
+  }
+  
+  /* Modifica il layout della sezione "diag-container" da griglia a flexbox con
+     disposizione a colonna. Questo fa sì che l'immagine e le informazioni testuali
+     si impilino verticalmente anziché affiancarsi. */
+  .diag-container {
+  display: flex;
+  flex-direction: column;
+  /* Riduci lo spazio tra gli elementi quando disposti in colonna. */
+  gap: 20px;
+  }
+  
+  /* Riduci la dimensione del font del titolo all'interno della sezione "diag"
+     per schermi più piccoli. */
+  .diag-info h2 {
+  font-size: 2.5rem;
+  }
+  
+  /* Riduci la dimensione del font del paragrafo di testo all'interno della
+     sezione "diag" per una migliore leggibilità su schermi più piccoli. */
+  .diag-info p {
+  font-size: 1rem;
+  }
+}

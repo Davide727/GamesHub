@@ -1,0 +1,728 @@
+[
+    {
+        "domanda": "Quale tag HTML si usa per i titoli?",
+        "risposte": ["<p>", "<h1>", "<div>", "<span>"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Qual è l'output di 2 + 2 in Python?",
+        "risposte": ["2", "4", "22", "Errore"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale linguaggio si usa per lo stile delle pagine web?",
+        "risposte": ["JavaScript", "HTML", "CSS", "Python"],
+        "rispostaCorretta": 2,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Come si dichiara una variabile in JavaScript?",
+        "risposte": ["var x;", "int x;", "string x;", "variable x;"],
+        "rispostaCorretta": 0,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale funzione C si usa per stampare a schermo?",
+        "risposte": ["input()", "print()", "scanf()", "read()"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale operatore si usa per confrontare valori in JavaScript?",
+        "risposte": ["=", "==", "===", "!=="],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale tag HTML si usa per i paragrafi?",
+        "risposte": ["<p>", "<h1>", "<div>", "<span>"],
+        "rispostaCorretta": 0,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Qual è l'output di 10 % 3 in Python?",
+        "risposte": ["1", "3", "0", "3.33"],
+        "rispostaCorretta": 0,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale funzione C si usa per l'input da tastiera?",
+        "risposte": ["print()", "scanf()", "input()", "read()"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale keyword si usa per ereditarietà in Java?",
+        "risposte": ["extends", "inherits", "subclass", "parent"],
+        "rispostaCorretta": 0,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale operatore logico significa 'o' in JavaScript?",
+        "risposte": ["&&", "||", "!", "^"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale linguaggio si usa per creare pagine web interattive?",
+        "risposte": ["HTML", "CSS", "JavaScript", "Python"],
+        "rispostaCorretta": 2,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Qual è l'output di '5' + 5 in JavaScript?",
+        "risposte": ["10", "55", "Errore", "5"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale funzione C si usa per allocare memoria dinamicamente?",
+        "risposte": ["print()", "malloc()", "scanf()", "free()"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale ciclo si usa per iterare su un array in JavaScript?",
+        "risposte": ["if", "while", "for", "switch"],
+        "rispostaCorretta": 2,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale tag HTML si usa per creare un link?",
+        "risposte": ["<p>", "<h1>", "<a>", "<span>"],
+        "rispostaCorretta": 2,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Qual è l'output di 2 ** 3 in Python?",
+        "risposte": ["6", "8", "9", "Errore"],
+        "rispostaCorretta": 1,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale proprietà CSS si usa per cambiare il colore del testo?",
+        "risposte": ["background-color", "font-size", "color", "text-align"],
+        "rispostaCorretta": 2,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale funzione C si usa per leggere una stringa da tastiera?",
+        "risposte": ["print()", "scanf()", "gets()", "read()"],
+        "rispostaCorretta": 2,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale metodo JavaScript si usa per aggiungere un elemento alla fine di un array?",
+        "risposte": ["push()", "pop()", "shift()", "unshift()"],
+        "rispostaCorretta": 0,
+        "difficolta": 1
+    },
+    {
+        "domanda": "Quale linguaggio è orientato agli oggetti?",
+        "risposte": ["C", "Assembly", "HTML", "Java"],
+        "rispostaCorretta": 3,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale protocollo si usa per le email?",
+        "risposte": ["HTTP", "FTP", "SMTP", "POP3"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale struttura dati è LIFO (Last In First Out)?",
+        "risposte": ["Coda", "Pila", "Lista", "Albero"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale linguaggio è più di alto livello?",
+        "risposte": ["Java", "Python", "C", "C++"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale operatore restituisce il resto di una divisione in Python?",
+        "risposte": ["/", "*", "%", "-"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Qual è la complessità temporale di un algoritmo di ricerca lineare?",
+        "risposte": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale linguaggio è usato per il frontend?",
+        "risposte": ["Python", "Java", "JavaScript", "C"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale metodo JavaScript si usa per stampare in console?",
+        "risposte": ["print()", "log()", "display()", "write()"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale registro si usa per il ritorno in Assembly?",
+        "risposte": ["AX", "BX", "CX", "SI"],
+        "rispostaCorretta": 0,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Come si cambia il colore di un testo in CSS?",
+        "risposte": ["text-color:", "font-color:", "color:", "style-color:"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale operatore si usa per assegnare un valore in C?",
+        "risposte": ["=", "==", ":=", "<-"],
+        "rispostaCorretta": 0,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Come si dichiara una variabile intera in Java?",
+        "risposte": ["variable int x;", "int x;", "x: int;", "integer x;"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale linguaggio di markup è usato per la struttura delle pagine web?",
+        "risposte": ["CSS", "JavaScript", "HTML", "Python"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale funzione JavaScript si usa per convertire una stringa in un numero intero?",
+        "risposte": ["parseFloat()", "parseInt()", "toString()", "toFixed()"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale ciclo si usa per eseguire un blocco di codice almeno una volta in C?",
+        "risposte": ["for", "while", "do...while", "switch"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale proprietà CSS si usa per impostare la dimensione del testo?",
+        "risposte": ["text-color", "font-size", "color", "text-align"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale operatore si usa per concatenare stringhe in Python?",
+        "risposte": ["+", "-", "*", "/"],
+        "rispostaCorretta": 0,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale metodo JavaScript si usa per rimuovere l'ultimo elemento di un array?",
+        "risposte": ["push()", "pop()", "shift()", "unshift()"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale funzione C si usa per copiare una stringa?",
+        "risposte": ["print()", "scanf()", "strcpy()", "read()"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale keyword si usa per creare una classe in JavaScript?",
+        "risposte": ["class", "object", "function", "variable"],
+        "rispostaCorretta": 0,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo backend?",
+        "risposte": ["HTML", "CSS", "JavaScript", "Python"],
+        "rispostaCorretta": 3,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per trasferire file da un server a un client?",
+        "risposte": ["HTTP", "FTP", "SMTP", "POP3"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale struttura dati è utilizzata per implementare una coda?",
+        "risposte": ["Pila", "Lista collegata", "Albero", "Coda"],
+        "rispostaCorretta": 3,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale è il risultato di 1 + 1 in C++?",
+        "risposte": ["0", "3", "2", "5"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale metodo JavaScript si usa per dividere una stringa in un array di sottostringhe?",
+        "risposte": ["join()", "split()", "concat()", "slice()"],
+        "rispostaCorretta": 1,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale funzione C si usa per confrontare due stringhe?",
+        "risposte": ["print()", "scanf()", "strcmp()", "read()"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale ciclo si usa per iterare su un array in Python?",
+        "risposte": ["if", "while", "for", "switch"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale proprietà CSS si usa per impostare il colore di sfondo di un elemento?",
+        "risposte": ["text-color", "font-size", "color", "background-color"],
+        "rispostaCorretta": 3,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale operatore si usa per incrementare una variabile di 1 in C?",
+        "risposte": ["+", "-", "*", "++"],
+        "rispostaCorretta": 3,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale metodo JavaScript si usa per rimuovere il primo elemento di un array?",
+        "risposte": ["push()", "pop()", "shift()", "unshift()"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale funzione C si usa per convertire una stringa in un numero intero?",
+        "risposte": ["print()", "scanf()", "atoi()", "read()"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale ciclo si usa per eseguire un blocco di codice un numero specificato di volte in JavaScript?",
+        "risposte": ["if", "while", "for", "switch"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale tag HTML si usa per creare una lista non ordinata?",
+        "risposte": ["<p>", "<h1>", "<ul>", "<span>"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Qual è l'output di '5' == 5 in JavaScript?",
+        "risposte": ["true", "false", "Errore", "5"],
+        "rispostaCorretta": 0,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale funzione C si usa per allocare memoria per un array di elementi?",
+        "risposte": ["print()", "malloc()", "calloc()", "free()"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale metodo JavaScript si usa per aggiungere un elemento all'inizio di un array?",
+        "risposte": ["push()", "pop()", "shift()", "unshift()"],
+        "rispostaCorretta": 3,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Quale keyword si usa per definire una funzione in JavaScript?",
+        "risposte": ["class", "object", "function", "variable"],
+        "rispostaCorretta": 2,
+        "difficolta": 2
+    },
+    {
+        "domanda": "Qual è la complessità temporale di un algoritmo di ricerca binaria?",
+        "risposte": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio ha gestione manuale della memoria?",
+        "risposte": ["Python", "Java", "C++", "JavaScript"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Con quale registro di solito si fa push iniziale in assembly?",
+        "risposte": ["EBP", "ESP", "AX", "BX"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ordinamento è più efficiente nel caso medio?",
+        "risposte": ["Bubble sort", "Insertion sort", "Merge sort", "Selection sort"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo di sicurezza si usa per HTTPS?",
+        "risposte": ["SSL/TLS", "SSH", "IPsec", "VPN"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ricerca è più efficiente in un array ordinato?",
+        "risposte": ["Ricerca lineare", "Ricerca binaria", "Ricerca per ampiezza", "Ricerca per profondità"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio di programmazione è noto per la sua gestione della memoria manuale?",
+        "risposte": ["Python", "Java", "C++", "JavaScript"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo di rete è utilizzato per il trasferimento di file?",
+        "risposte": ["HTTP", "FTP", "SMTP", "POP3"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale struttura dati è utilizzata per implementare una coda (queue)?",
+        "risposte": ["Array", "Stack", "Linked list", "Tree"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio permette chiamate sincrone?",
+        "risposte": ["Java", "C", "JavaScript", "Python"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale modello di programmazione prevede dichirazioni?",
+        "risposte": ["Imperativo", "Dichiarativo", "Procedurale", "Funzionale"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il paradigma di programmazione con le funzioni?",
+        "risposte": ["Orientato agli oggetti", "Procedurale", "Funzionale", "Logico"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale database è noto per essere in XAMPP?",
+        "risposte": ["MySQL", "PostgreSQL", "MongoDB", "Oracle"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del garbage collector in Java?",
+        "risposte": ["Gestire la memoria", "Compilare il codice", "Eseguire il codice", "Ottimizzare il codice"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale framework è utilizzato per app mount?",
+        "risposte": ["Angular", "React", "Vue", "Node"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo si usa in cifratura a chiave pubblica?",
+        "risposte": ["LZ77", "Huffman", "Diffie-Hellman", "Run-length"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del linker in C?",
+        "risposte": ["Compilare il codice", "Eseguire il codice", "Collegare i file oggetto", "Ottimizzare il codice"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale è il risultato di 6 + 6 in Python?",
+        "risposte": ["0", "1", "12", "3"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per la comunicazione nel web?",
+        "risposte": ["HTTP", "FTP", "gRPC", "SMTP"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per i sanitizer?",
+        "risposte": ["Java", "C", "Assembly", "Python"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ordinamento ha la migliore complessità temporale nel caso peggiore?",
+        "risposte": ["Bubble sort", "Insertion sort", "Merge sort", "Selection sort"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale framework è utilizzato per css standard?",
+        "risposte": ["Django", "Bootstrap", "Spring", "Express"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di crittografia è più usato?",
+        "risposte": ["RSA", "DES", "AES", "SHA"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del precompilatore in C?",
+        "risposte": ["Compilare il codice", "Eseguire il codice", "Gestire le direttive #include", "Ottimizzare il codice"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale tag si usa per le immagini in HTML",
+        "risposte": ["Form", "Img", "H1", "H2"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per la comunicazione in tempo reale?",
+        "risposte": ["HTTP", "FTP", "WebSocket", "SMTP"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo di applicazioni di intelligenza artificiale?",
+        "risposte": ["Java", "C#", "Python", "JavaScript"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ricerca è utilizzato in BFS?",
+        "risposte": ["Ricerca lineare", "Ricerca binaria", "Ricerca per profondità", "Ricerca per ampiezza"],
+        "rispostaCorretta": 3,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale di questi è usato per creare server?",
+        "risposte": ["Angular", "Node", "Vue", "Ember"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di hashing è utilizzato in Bitcoin?",
+        "risposte": ["SHA-1", "SHA-256", "MD5", "RIPEMD-160"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del linker dinamico in Linux?",
+        "risposte": ["Compilare il codice", "Eseguire il codice", "Collegare le librerie dinamiche", "Ottimizzare il codice"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale è il risultato di 7 + 7 in Python?",
+        "risposte": ["1", "2", "14", "3"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per la comunicazione tra browser e server in tempo reale?",
+        "risposte": ["HTTP", "FTP", "WebSocket", "SMTP"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo di applicazioni di intelligenza artificiale?",
+        "risposte": ["Java", "C#", "Python", "JavaScript"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale è il risulato di 8 + 8 in C?",
+        "risposte": ["1", "2", "16", "3"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del garbage collector in C#?",
+        "risposte": ["Gestire la memoria", "Compilare il codice", "Eseguire il codice", "Ottimizzare il codice"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale libreria si importa per pulsanti fire?",
+        "risposte": ["CSS", "Node", "Swal", "Vue"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di crittografia è a chiave pubblica?",
+        "risposte": ["RSA", "DES", "AES", "SHA"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del precompilatore in C++?",
+        "risposte": ["Compilare il codice", "Eseguire il codice", "Gestire le direttive #include", "Ottimizzare il codice"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale pattern di progettazione è utilizzato per gestire i callback in JavaScript?",
+        "risposte": ["Factory", "Builder", "Promise", "Observer"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per la comunicazione tra browser e server in tempo reale bidirezionale?",
+        "risposte": ["HTTP", "FTP", "WebSocket", "SMTP"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo di applicazioni di machine learning?",
+        "risposte": ["Java", "C#", "Python", "JavaScript"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ricerca è utilizzato in Dijkstra?",
+        "risposte": ["Ricerca lineare", "Ricerca binaria", "Ricerca per ampiezza", "Ricerca del percorso minimo"],
+        "rispostaCorretta": 3,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale framework è utilizzato per CSS standard?",
+        "risposte": ["Angular", "React Native", "Bootstrap", "Ember"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di hashing è utilizzato in Git?",
+        "risposte": ["SHA-1", "SHA-256", "MD5", "RIPEMD-160"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del linker statico in Linux?",
+        "risposte": ["Compilare il codice", "Eseguire il codice", "Collegare le librerie statiche", "Ottimizzare il codice"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale è il risultato di 9 + 9 in C?",
+        "risposte": ["1", "2", "18", "3"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per rendere sicuro TCP/IP?",
+        "risposte": ["HTTP", "FTP", "TLS", "SMTP"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo di applicazioni di realtà virtuale?",
+        "risposte": ["Java", "C#", "C++", "JavaScript"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ricerca è utilizzato in DFS?",
+        "risposte": ["Ricerca lineare", "Ricerca binaria", "Ricerca per ampiezza", "Ricerca per profondità"],
+        "rispostaCorretta": 3,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale framework è utilizzato per CSS standard?",
+        "risposte": ["Bootstrap", "React Native", "Vue", "Ember"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di hashing è utilizzato in PBKDF2?",
+        "risposte": ["SHA-1", "SHA-256", "Keccak-256", "RIPEMD-160"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del compilatore JIT in Java?",
+        "risposte": ["Compilare il codice", "Eseguire il codice", "Compilare il bytecode in codice macchina", "Ottimizzare il codice"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale è il risualtato di 10 + 10 in C?",
+        "risposte": ["1", "20", "3", "4"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per i file?",
+        "risposte": ["HTTP", "FTP", "CoAP", "SMTP"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo di applicazioni web?",
+        "risposte": ["Java", "C#", "Fortran", "JavaScript"],
+        "rispostaCorretta": 3,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ricerca è utilizzato in BFS?",
+        "risposte": ["Ricerca lineare", "Ricerca binaria", "Ricerca per ampiezza", "Ricerca euristica limitata"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale framework è utilizzato per CSS base?",
+        "risposte": ["Angular", "React Native", "Bootstrap", "Ember"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di hashing è utilizzato in AES?",
+        "risposte": ["SHA-1", "SHA-256", "SHA-3", "RIPEMD-160"],
+        "rispostaCorretta": 1,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Qual è il ruolo del garbage collector in C?",
+        "risposte": ["Gestire la memoria", "Compilare il codice", "Eseguire il codice", "Ottimizzare il codice"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Con cosa si compila per usare address sanitizer?",
+        "risposte": ["-m32", "-g", "-fsanitize", "o1"],
+        "rispostaCorretta": 2,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale protocollo è utilizzato per la comunicazione nel web?",
+        "risposte": ["HTTP", "FTP", "gRPC", "SMTP"],
+        "rispostaCorretta": 0,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale linguaggio è utilizzato per lo sviluppo di applicazioni web?",
+        "risposte": ["Java", "C#", "R", "JavaScript"],
+        "rispostaCorretta": 3,
+        "difficolta": 3
+    },
+    {
+        "domanda": "Quale algoritmo di ricerca è utilizzato in DFS?",
+        "risposte": ["Ricerca lineare", "Ricerca binaria", "Ricerca per ampiezza", "Ricerca in profondità"],
+        "rispostaCorretta": 3,
+        "difficolta": 3
+    }
+]

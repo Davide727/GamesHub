@@ -1,0 +1,167 @@
+/* 
+ Resetta i margini e i padding predefiniti di tutti gli elementi,
+ e imposta il modello di box-sizing a border-box per una gestione
+ più intuitiva delle dimensioni degli elementi. 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Stili per l'elemento body: imposta il font di base, un background
+   chiaro per facilitare la lettura, il colore del testo principale,
+   l'interlinea per migliorare la leggibilità e rimuove i margini e
+   i padding predefiniti del body. 
+  */
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5; 
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Stili per l'header della pagina: imposta un background nero semi-trasparente,
+   un padding interno, un'altezza fissa, utilizza Flexbox per disporre gli
+   elementi internamente in colonna e centrarli sia orizzontalmente che
+   verticalmente, allineando anche il testo al centro. 
+  */
+  header {
+    background-color: #00000068;
+    padding: 20px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Stili per il contenitore del logo all'interno dell'header: utilizza
+   Flexbox per allineare gli elementi (immagine e testo) orizzontalmente
+   e centrarli verticalmente e orizzontalmente. 
+  */
+  header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Stili per l'immagine del logo all'interno dell'header: imposta una
+   larghezza e un'altezza fisse per renderla quadrata, applica un bordo
+   arrotondato per renderla circolare e aggiunge un margine a destra per
+   separarla dal testo del logo. 
+  */
+  header .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  /* Stili per il titolo h1 all'interno del logo nell'header: imposta il
+   colore con il colore del brand (oro), una dimensione del font, e
+   rimuove il margine predefinito. 
+  */
+  header .logo h1 {
+    color: #ffbf00; 
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  /* Stili alternativi per il logo (potrebbe essere ridondante se
+   header .logo h1 ha già gli stili desiderati): imposta la dimensione
+   del font, il peso del font in grassetto, il colore oro e aggiunge
+   un'ombra del testo nera. 
+  */
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffbf00; 
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  /* Stili per l'immagine del logo: imposta una larghezza
+   e un'altezza fisse per mantenere il rapporto quadrato, applica un
+   bordo arrotondato per renderla circolare e utilizza object-fit: cover
+   per assicurarsi che l'immagine si adatti bene all'interno del contenitore
+   senza distorsioni. 
+  */
+  .logo-img {
+    width: 60px;       
+    height: 60px;      
+    border-radius: 50%;
+    object-fit: cover; 
+  }
+  
+  /* Stili per l'elemento main che contiene il contenuto principale della
+   pagina: imposta una larghezza massima per limitare la larghezza del
+   contenuto su schermi più grandi, margini automatici a sinistra e a
+   destra per centrarlo orizzontalmente, un padding interno, un background
+   bianco, un bordo sottile e un bordo arrotondato. 
+  */
+  main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Stili per le sezioni all'interno dell'elemento main: imposta un margine
+   inferiore per separare le diverse sezioni di contenuto. 
+  */
+  main section {
+    margin-bottom: 30px;
+  }
+
+  /* Stili per i titoli h2 all'interno dell'elemento main: imposta il colore
+   nero, una dimensione del font, un margine superiore, un bordo inferiore
+   sottile e un padding inferiore per creare una linea di separazione. 
+  */
+  main h2 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  /* Stili per i paragrafi all'interno dell'elemento main: imposta una
+   dimensione del font e un margine inferiore per la spaziatura tra i paragrafi. 
+  */
+  main p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Stili per l'elemento footer: imposta un background nero, un padding
+   interno, allinea il testo al centro, imposta il colore del testo bianco
+   e una dimensione del font leggermente più piccola. 
+  */
+  footer {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* Stili per gli elementi a (link): imposta il colore con il colore del
+   brand (oro) e rimuove la sottolineatura predefinita. 
+  */
+  a {
+    color: #ffbf00;
+    text-decoration: none;
+  }
+
+  /* Stili per lo stato hover degli elementi a (link): aggiunge una
+   sottolineatura al testo del link quando il mouse ci passa sopra. 
+  */
+  a:hover {
+    text-decoration: underline;
+  }
+  

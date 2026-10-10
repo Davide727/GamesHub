@@ -1,0 +1,212 @@
+/*
+ Imposta i margini e il padding a zero per tutti gli elementi, definisce il
+ modello di box-sizing come border-box per una gestione più semplice delle
+ dimensioni degli elementi. Stila il body con un font di base, un'immagine
+ di sfondo fissa a copertura totale, colore del testo bianco e un'altezza
+ della linea predefinita.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url('immagini/s_vs_m.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+}
+
+/*
+ Definisce lo stile per i contenitori delle diverse sezioni della pagina (i
+ riquadri grigi). Imposta un colore di sfondo semi-trasparente, un padding
+ interno, bordi arrotondati, margini superiore, inferiore e laterali (con
+ auto per centrare), una larghezza massima e allineamento del testo al centro.
+*/
+.section-container {
+  background-color: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 40px auto 40px;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/*
+ Stile per il titolo principale all'interno di ogni sezione. Imposta la
+ dimensione del font, il margine inferiore, il colore del testo ciano e un
+ effetto di ombra del testo ciano.
+*/
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  transform: rotateX(30deg) rotateY(20deg) rotateZ(-10deg);
+  animation: rotation 5s infinite linear;
+  font-weight: bold; 
+  padding-bottom: 15px;
+}
+
+/*
+ Stile specifico per il titolo della sezione dei giochi online, sovrascrivendo
+ il colore del testo e l'ombra del testo con tonalità giallo/arancio.
+*/
+.online-games .section-title {
+  color: #ffbf00; 
+  text-shadow: 0 0 5px #ffbf00;
+  transform: rotateX(30deg) rotateY(20deg) rotateZ(-10deg);
+  animation: rotation 5s infinite linear;
+  font-weight: bold; 
+  padding-bottom: 15px;
+}
+
+@keyframes rotation {
+  0% { transform: rotateX(30deg) rotateY(20deg) rotateZ(-10deg); }
+  50% { transform: rotateX(-30deg) rotateY(-20deg) rotateZ(10deg); }
+  100% { transform: rotateX(30deg) rotateY(20deg) rotateZ(-10deg); }
+}
+
+/*
+ Definisce il contenitore per le card dei giochi. Utilizza Flexbox per disporre
+ le card in riga (e a capo se necessario), imposta uno spazio tra le card,
+ le centra orizzontalmente e imposta margini laterali automatici.
+*/
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/*
+ Stile per ogni singola card del gioco. Imposta la posizione come relativa
+ per posizionare gli elementi interni in modo assoluto, definisce larghezza e
+ altezza fisse, uno sfondo con sfumatura lineare, bordi arrotondati, nasconde
+ l'overflow e aggiunge una transizione per gli effetti hover e un cursore a
+ puntatore.
+*/
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+/*
+ Stile per l'immagine all'interno della card. Imposta larghezza e altezza al
+ 100% del contenitore, definisce la modalità di adattamento dell'immagine
+ (copertura) e aggiunge una transizione per l'effetto hover.
+*/
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/*
+ Applica una rotazione e una scala leggermente maggiore alla card al passaggio
+ del mouse per un effetto visivo.
+*/
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+/*
+ Applica una scala leggermente maggiore all'immagine all'interno della card
+ al passaggio del mouse.
+*/
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/*
+ Definisce l'overlay per il titolo della card, posizionandolo in alto al centro
+ della card, impostando uno sfondo semi-trasparente nero, padding, z-index per
+ stare sopra l'immagine, allineamento del testo al centro e bordi arrotondati.
+*/
+.card-title-overlay {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  z-index: 3;
+  text-align: center;
+  border-radius: 10px; 
+}
+
+/*
+ Stile per il testo del titolo all'interno dell'overlay del titolo. Imposta
+ margini, dimensione del font, colore del testo bianco e peso del font.
+*/
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/*
+ Definisce l'overlay per la descrizione della card, inizialmente nascosto con
+ altezza zero e overflow nascosto. Ha una transizione per l'altezza, il colore
+ di sfondo e il padding. Lo z-index lo posiziona sopra l'immagine.
+*/
+.card__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+  padding: 0 10px;
+  z-index: 2;
+}
+
+/*
+ Stile specifico per l'overlay della descrizione delle card nella sezione dei
+ giochi offline al passaggio del mouse. Imposta un'altezza, un colore di sfondo
+ blu semi-trasparente, padding e colore del testo bianco.
+*/
+.offline-games .card:hover .card__description {
+  height: 120px;
+  background-color: rgba(0, 123, 255, 0.8); 
+  padding: 10px;
+  color: #ffffff;
+}
+
+/*
+ Stile specifico per l'overlay della descrizione delle card nella sezione dei
+ giochi online al passaggio del mouse. Imposta un'altezza, un colore di sfondo
+ arancione semi-trasparente, padding e colore del testo bianco.
+*/
+.online-games .card:hover .card__description {
+  height: 120px;
+  background-color: rgba(255, 106, 0, 0.8); 
+  padding: 10px;
+  color: #ffffff;
+}
+
+/*
+ Stile per il piè di pagina della pagina. Imposta un colore di sfondo nero,
+ padding interno, allineamento del testo al centro, colore del testo bianco
+ e una dimensione del font leggermente più piccola.
+*/
+footer {
+  background-color: #000;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+}
+

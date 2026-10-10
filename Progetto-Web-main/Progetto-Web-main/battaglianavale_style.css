@@ -1,0 +1,522 @@
+/*
+ Definisce il font di base, imposta un'immagine di sfondo fissa e a copertura totale,
+ imposta il colore del testo predefinito, allinea il testo al centro e rimuove
+ margini e padding predefiniti dal body.
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('immagini/s_vs_m.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ Crea un elemento pseudo che si sovrappone allo sfondo, rendendolo leggermente
+ più scuro per migliorare la leggibilità del testo. È posizionato in modo fisso
+ per coprire l'intera finestra e ha uno z-index negativo per stare dietro al contenuto.
+*/
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: -1;
+}
+
+/*
+ Stile specifico per il titolo principale della pagina, impostando il colore del testo.
+*/
+h1 {
+  color: #61dafb;
+}
+
+/*
+ Definisce il contenitore principale per il contenuto della pagina. Aggiunge padding,
+ imposta il posizionamento relativo per eventuali elementi figli posizionati in modo
+ assoluto, utilizza Flexbox per disporre gli elementi in colonna e centrarli
+ orizzontalmente, e imposta un'altezza minima pari all'altezza della viewport.
+*/
+.container {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+/*
+ Imposta la dimensione del font e il margine inferiore per il titolo principale.
+*/
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/*
+ Contiene le griglie di gioco (del giocatore e del computer). Utilizza Flexbox per
+ disporle orizzontalmente, le centra, aggiunge spazio tra loro e permette loro
+ di andare a capo su schermi più piccoli per la responsività. Imposta anche la
+ larghezza al 100% del contenitore genitore.
+*/
+.grids {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*
+ Stile per i pulsanti di controllo del gioco. Centra il contenuto al loro interno,
+ imposta la larghezza al 100% del contenitore genitore e una larghezza massima
+ per evitare che diventino eccessivamente larghi.
+*/
+#game-status, 
+#rotate, 
+#new-game {
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+}
+
+/*
+ Definisce la struttura della griglia di gioco utilizzando CSS Grid. Crea una griglia
+ 10x10 con dimensioni fisse per le celle, aggiunge uno spazio tra le celle, imposta
+ un colore di sfondo, un padding interno e un bordo. `overflow-x: auto` aggiunge
+ una barra di scorrimento orizzontale se la griglia diventa troppo larga.
+*/
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    background-color: #282c34;
+    padding: 10px;
+    border: 2px solid #61dafb;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/*
+ Stile per le statistiche che sono specificamente destinate alla visualizzazione
+ su dispositivi mobili. Per impostazione predefinita, sono nascoste.
+*/
+.stats-mobile {
+  display: none;
+}
+
+/*
+ Stile per il pulsante che, quando cliccato su dispositivi mobili, potrebbe
+ rivelare le statistiche nascoste. Ha uno sfondo color oro, testo nero, padding,
+ bordi arrotondati, margini e si comporta come un elemento di blocco.
+*/
+.mobile-stats-btn {
+  background: gold;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 15px 0;
+  display: block;
+}
+
+/*
+ Definisce l'aspetto del contenitore che mostra le statistiche del gioco. Ha un
+ bordo, un raggio dei bordi, padding, margini per centrarlo, uno sfondo semi-trasparente,
+ una larghezza fissa con una larghezza massima e utilizza Flexbox per allineare
+ gli elementi al suo interno.
+*/
+#stats-container {
+  border: 2px solid #61dafb;
+  display: block;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 30px auto;
+  background: rgba(0, 40, 60, 0.9);
+  width: 90%;
+  max-width: 300px;
+  grid-area: stats;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ Stile per i pulsanti all'interno del contenitore delle statistiche. Hanno un
+ colore di sfondo, un colore del testo, padding, bordi arrotondati, rimuovono
+ la sottolineatura dai link, si comportano come elementi di blocco e hanno una
+ transizione per un effetto hover.
+*/
+.stats-btn {
+  background: #61dafb;
+  color: #20232a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+/*
+ Cambia l'aspetto dei pulsanti delle statistiche al passaggio del mouse,
+ modificando il colore di sfondo e applicando una piccola trasformazione di scala.
+*/
+.stats-btn:hover {
+  background: #4fa8d3;
+  transform: scale(1.05);
+}
+
+/*
+ Stile per un messaggio di avviso specifico per gli utenti guest, con un colore
+ del testo giallo oro, una dimensione del font leggermente più piccola e un'altezza
+ della linea definita.
+*/
+.guest-warning {
+  color: #ffd700;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/*
+ Stile per il pulsante di login, con uno sfondo verde, testo bianco, padding,
+ bordi arrotondati, margine superiore e si comporta come un elemento inline-block.
+*/
+.btn-login {
+  background: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/*
+ Stile per ogni singola cella della griglia di gioco. Imposta larghezza e altezza
+ fisse e un bordo. La posizione è impostata come relativa per poter posizionare
+ l'elemento interno in modo assoluto.
+*/
+.square {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 1px solid #444;
+}
+
+/*
+ Stile per l'elemento interno di ogni cella della griglia, utilizzato per mostrare
+ immagini (come colpi o navi). È posizionato in modo assoluto per riempire lo
+ spazio del genitore (.square) con un piccolo offset dal bordo. Imposta il cursore
+ come puntatore e gestisce il ridimensionamento, la ripetizione e la posizione
+ dell'immagine di sfondo.
+*/
+.square-inner {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+/*
+ Riduce leggermente l'opacità del quadrato al passaggio del mouse per fornire
+ un feedback visivo.
+*/
+.square:hover {
+    opacity: 0.8;
+}
+
+/*
+ Stile per l'area in cui vengono visualizzati i messaggi di stato del gioco.
+ Imposta un margine superiore, una dimensione del font, un colore del testo
+ e un'altezza minima per evitare problemi di layout.
+*/
+.message {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ffd700;
+    min-height: 40px;
+}
+
+/*
+ Stile di base per tutti gli elementi `<button>` sulla pagina, impostando margini,
+ padding, colore di sfondo, rimozione del bordo, bordi arrotondati e cursore.
+*/
+button {
+    margin: 10px;
+    padding: 8px 16px;
+    background: #61dafb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*
+ Classe utilizzata per nascondere elementi impostando la proprietà `display` a `none !important`,
+ garantendo che sovrascriva altri stili di display.
+*/
+.hidden {
+    display: none !important;
+}
+
+/*
+ Stile per il pulsante di uscita dal gioco. È posizionato in modo fisso nell'angolo
+ superiore destro della finestra, ha padding, colore di sfondo e testo, rimuove
+ la sottolineatura, ha bordi arrotondati e uno z-index elevato per stare sopra altri elementi.
+*/
+.exit-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #ff4444;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/*
+ Scurisce il colore di sfondo del pulsante di uscita al passaggio del mouse.
+*/
+.exit-btn:hover {
+  background: #cc0000;
+}
+
+/*
+ Stile specifico per il pulsante "Nuova Partita", con margini per centrarlo,
+ padding più grande, dimensione del font aumentata, sfondo verde, testo bianco
+ e si comporta come un elemento di blocco.
+*/
+#new-game {
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background: #4CAF50;
+    display: block;
+    color: white;
+}
+
+/*
+ Scurisce il colore di sfondo del pulsante "Nuova Partita" al passaggio del mouse.
+*/
+#new-game:hover {
+    background: #45a049;
+}
+
+/*
+ Stile per le celle della griglia che sono state colpite, impostando un'immagine
+ di sfondo animata. L'`!important` assicura che questo stile sovrascriva altri stili di sfondo.
+*/
+.hit {
+    background-image: url('immagini/battaglia/batt103.gif') !important;
+}
+
+/*
+ Stile per le celle della griglia in cui un colpo è andato a vuoto, impostando
+ un'immagine di sfondo animata. L'`!important` assicura la priorità.
+*/
+.miss {
+    background-image: url('immagini/battaglia/batt102.gif') !important;
+}
+
+/*
+ Stile per le celle della griglia che contengono una nave nascosta. Utilizza la
+ stessa immagine di sfondo del mare di base e ne gestisce il ridimensionamento,
+ la ripetizione e la posizione.
+*/
+.ship-hidden {
+    background-image: url('immagini/battaglia/batt100.gif') !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*
+ Stile per l'area in cui viene visualizzato lo stato attuale del gioco. Imposta
+ margini e un'altezza minima.
+*/
+#game-status {
+    margin: 5px auto;
+    min-height: 60px;
+}
+
+/*
+ Stile per un messaggio che indica quando una nave è stata affondata. Ha un colore
+ del testo rosso, testo in grassetto, testo in maiuscolo, un margine superiore
+ e un'animazione di "pulse".
+*/
+.sunk-alert {
+    color: #ff4444;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    animation: pulse 1s infinite;
+}
+
+/*
+ Definisce l'animazione "pulse" che fa variare l'opacità dell'elemento a cui è
+ applicata in un ciclo infinito di 1 secondo.
+*/
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/*
+ Contiene stili specifici per adattare il layout su schermi più piccoli.
+*/
+@media (max-width: 768px) {
+  /*
+   Riduce il padding, nasconde la barra di scorrimento orizzontale se presente
+   e imposta la larghezza al 100%.
+  */
+  .container {
+    padding: 10px;
+    overflow-x: hidden; 
+    width: 100%;
+  }
+  
+  /*
+   Riduce lo spazio tra le griglie e aggiunge un piccolo padding laterale.
+  */
+  .grids {
+    gap: 15px;
+    padding: 0 5px;
+  }
+
+   /*
+    Ridisegna la griglia utilizzando frazioni (1fr) per adattare le colonne e le
+    righe in modo uniforme, mantenendo un aspect ratio di 1:1 per le celle quadrate. Rimuove il
+    padding interno e i margini, e azzera lo spazio tra le celle. Riduce anche
+    lo spessore del bordo.
+   */
+  .board {
+    grid-template-columns: repeat(10, 1fr); 
+    grid-auto-rows: 1fr; 
+    aspect-ratio: 1/1; 
+    padding: 0;
+    margin: 0 auto;
+    gap: 0; 
+    border: 1px solid #61dafb;
+  }
+
+  /*
+   Forza la larghezza e l'altezza al 100% del genitore (cella della griglia),
+   imposta dimensioni minime e include il bordo nelle dimensioni totali.
+  */
+  .square {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    border: 0.5px solid #444;
+    box-sizing: border-box; 
+  }
+
+  /*
+   Aggiunge un margine superiore per distanziarlo dagli altri elementi.
+  */
+  h1 {
+    margin-top: 60px;
+  }
+
+  /*
+   Se ci fosse un contenitore per i controlli, questo stile lo disporrebbe
+   in colonna, centrerebbe gli elementi e aggiungerebbe spazio tra loro.
+  */
+  .controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  /*
+   Assicura che sia un elemento di blocco, lo centra orizzontalmente, imposta
+   una larghezza e una larghezza massima, e utilizza Flexbox per allineare gli elementi.
+  */
+  #stats-container {
+    grid-area: stats;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*
+   Imposta la larghezza al 100% e include il bordo nelle dimensioni totali
+   per adattarsi meglio a schermi stretti.
+  */
+  .stats-btn, .btn-login {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /*
+   Assicura che l'overflow sia visibile e che utilizzino il layout a griglia.
+  */
+  #player-grid,
+  #computer-grid {
+    overflow: visible;
+    display: grid;
+  }
+}
+
+/*
+ Contiene stili specifici per schermi ancora più piccoli.
+*/
+@media (max-width: 480px) {
+  /*
+   Aumenta leggermente lo spazio tra le griglie.
+  */
+    .grids {
+        gap: 20px;
+    }
+    
+    /*
+     Riduce leggermente la larghezza massima per evitare che occupi troppo spazio.
+    */
+    .board {
+      max-width: 95vw; 
+    }
+
+    /*
+     Mantiene le dimensioni minime.
+    */
+    .square {
+      min-width: 30px !important;
+      min-height: 30px !important;
+    }
+
+    /*
+     Riduce il padding interno.
+    */
+    #stats-container {
+      padding: 15px;
+    }
+    
+    /*
+     Riduce la dimensione del font.
+    */
+    .stats-btn {
+      font-size: 14px;
+    }
+}

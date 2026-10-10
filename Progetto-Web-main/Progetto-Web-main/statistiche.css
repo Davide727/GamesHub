@@ -1,0 +1,209 @@
+/*
+ Imposta l'immagine di sfondo, la ridimensiona per coprire l'intero schermo,
+ la centra. Assicura un'altezza minima del 100% della viewport. Rimuove i
+ margini predefiniti e aggiunge un padding generale. Imposta il font di base,
+ il colore del testo bianco e utilizza Flexbox per disporre gli elementi
+ verticalmente e centrarli orizzontalmente. Imposta la posizione come relativa
+ per permettere il posizionamento assoluto dello pseudo-elemento ::after.
+*/
+body {
+    background-image: url(immagini/s_vs_m.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/*
+ Imposta il modello di box-sizing a border-box per includere padding e bordi
+ nel calcolo della larghezza e dell'altezza degli elementi.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+ Crea un pseudo-elemento che si sovrappone allo sfondo per scurirlo e migliorare
+ la leggibilità del testo. È posizionato in modo assoluto per coprire l'intera
+ viewport, ha uno sfondo nero semi-trasparente e un z-index negativo per stare
+ dietro al contenuto del body.
+*/
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/*
+ Stile per il titolo principale della pagina. Imposta il colore giallo oro,
+ allinea il testo al centro, aggiunge un'ombra del testo scura e imposta un
+ margine superiore e inferiore.
+*/
+h1 {
+    color: #FFD700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 30px 0;
+}
+
+/*
+ Contenitore per le statistiche del giocatore. Imposta uno sfondo nero
+ semi-trasparente, un bordo giallo oro, bordi arrotondati, un padding interno
+ generoso, una larghezza del 100% con una larghezza massima, margini automatici
+ per centrare, un'ombra esterna e allinea il testo al centro. Utilizza
+ box-sizing: border-box per gestire correttamente le dimensioni con il padding.
+*/
+.stats-box {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px solid #FFD700;
+    border-radius: 15px;
+    padding: 30px 50px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/*
+ Stile per i paragrafi all'interno del box delle statistiche. Imposta la
+ dimensione del font, un margine verticale, un padding interno, uno sfondo
+ giallo oro leggermente trasparente e bordi arrotondati.
+*/
+.stats-box p {
+    font-size: 1.3em;
+    margin: 20px 0;
+    padding: 12px;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+}
+
+/*
+ Contenitore per il bottone di ritorno. Imposta un margine superiore e allinea
+ il testo al centro.
+*/
+.button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/*
+ Stile per il link di ritorno. Lo visualizza come un blocco in linea, imposta
+ uno sfondo giallo oro, il colore del testo nero (con !important per priorità),
+ un padding interno, rimuove la sottolineatura, imposta bordi arrotondati,
+ imposta il font in grassetto, una dimensione del font e aggiunge una transizione
+ per gli effetti hover. Imposta un bordo trasparente iniziale.
+*/
+a {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #000 !important;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/*
+ Stile per l'effetto hover sul link di ritorno. Cambia lo sfondo in nero,
+ il colore del testo in giallo oro (con !important), imposta il colore del
+ bordo in giallo oro, applica una leggera traslazione verticale verso l'alto
+ e aggiunge un'ombra esterna.
+*/
+a:hover {
+    background-color: #000;
+    color: #FFD700 !important;
+    border-color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.stats-box {
+  flex: 1 1 calc(33.333% - 40px); /* 3 per riga con gap incluso */
+  box-sizing: border-box;
+  min-width: 250px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border: 3px solid #FFD700;
+  border-radius: 15px;
+  color: white;
+}
+
+/*
+ Stili specifici per schermi con una larghezza massima di 768 pixel (tablet).
+ Riduce il padding del body, la dimensione del font dell'h1, imposta la
+ larghezza del box delle statistiche e il suo padding al 100%, e riduce la
+ dimensione del font dei paragrafi e del link.
+*/
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    .stats-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        flex: 1 1 100%;
+    }
+
+    .stats-box p {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    a {
+        padding: 14px 28px;
+        font-size: 1em;
+    }
+}
+
+/*
+ Stili specifici per schermi con una larghezza massima di 480 pixel (smartphone).
+ Riduce ulteriormente la dimensione del font dell'h1 e dei paragrafi, e riduce
+ il padding e la dimensione del font del link.
+*/
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .stats-box p {
+        font-size: 1.05em;
+    }
+
+    a {
+        padding: 12px 22px;
+        font-size: 0.95em;
+    }
+}

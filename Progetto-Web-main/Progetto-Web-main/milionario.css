@@ -1,0 +1,489 @@
+/*
+ Imposta il font di base, il colore del testo bianco, utilizza Flexbox per
+ disporre gli elementi verticalmente e centrarli orizzontalmente. Assicura
+ che l'altezza minima sia il 100% della viewport. Rimuove i margini predefiniti
+ del body. Imposta un'immagine di sfondo fissa e la ridimensiona per coprire
+ l'intero schermo. Imposta la posizione come relativa per poter posizionare
+ lo pseudo-elemento ::before in modo assoluto rispetto ad esso.
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('immagini/s_vs_m.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/*
+ Imposta il modello di box-sizing a border-box per includere padding e bordi
+ nel calcolo della larghezza e dell'altezza degli elementi.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+ Crea un pseudo-elemento che si sovrappone allo sfondo per scurirlo e migliorare
+ la leggibilità del testo. È posizionato in modo fisso per coprire l'intera
+ viewport, ha uno sfondo nero semi-trasparente e un z-index negativo per stare
+ dietro al contenuto del body.
+*/
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Riduce opacità per vedere meglio lo sfondo */
+    z-index: -1;
+}
+
+/*
+ Contiene gli elementi principali del gioco e li centra orizzontalmente. Imposta
+ una larghezza e una larghezza massima, un margine superiore e utilizza CSS Grid
+ per definire il layout delle diverse aree (titolo, scaletta, domanda, risposte,
+ guadagno, timer, bottone, stats). Definisce le aree della griglia e imposta
+ l'allineamento degli elementi all'inizio della loro cella.
+*/
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-areas:
+        "titolo titolo"
+        "scaletta domanda"
+        "scaletta risposte"
+        "scaletta guadagno"
+        "scaletta timer"
+        "scaletta bottone"
+        "stats stats";
+    grid-template-columns: 1fr;
+    align-items: start;
+}
+
+/*
+ Stile per il titolo principale del gioco. Imposta la dimensione del font,
+ il margine inferiore, il colore oro e un'ombra del testo nera. Lo posiziona
+ nell'area 'titolo' della griglia.
+*/
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: gold;
+    text-shadow: 2px 2px 4px #000;
+    grid-area: titolo;
+}
+
+/*
+ Stile per la visualizzazione del guadagno corrente. Imposta la dimensione
+ del font, il colore oro, lo posiziona nell'area 'guadagno' della griglia,
+ allinea il testo al centro, imposta uno sfondo scuro, un padding, bordi
+ arrotondati e una larghezza massima.
+*/
+.guadagno {
+    font-size: 1.2em;
+    color: gold;
+    grid-area: guadagno;
+    text-align: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 25px;
+    max-width: 300px;
+}
+
+/*
+ Stile per la visualizzazione della domanda. Imposta la dimensione del font,
+ un padding interno, un margine verticale, uno sfondo scuro, bordi arrotondati
+ e occupa tutta la larghezza disponibile nella sua area 'domanda' della griglia.
+*/
+.domanda {
+    font-size: 1.5em;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #222;
+    border-radius: 25px;
+    width: 100%;
+    grid-area: domanda;
+}
+
+/*
+ Contenitore per le opzioni di risposta. Utilizza CSS Grid per disporre le
+ risposte in due colonne con uno spazio tra di esse. Imposta un margine inferiore
+ e occupa tutta la larghezza disponibile nella sua area 'risposte' della griglia.
+*/
+.risposte {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    grid-area: risposte;
+}
+
+/*
+ Stile per ogni singola opzione di risposta. Imposta un padding interno,
+ uno sfondo scuro, bordi arrotondati, cursore a puntatore per indicare
+ interattività e una transizione per l'effetto hover.
+*/
+.risposta {
+    padding: 15px;
+    background-color: #333;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*
+ Stile per l'effetto hover sulle opzioni di risposta, scurisce leggermente lo sfondo.
+*/
+.risposta:hover {
+    background-color: #444;
+}
+
+/*
+ Stile per la visualizzazione del timer. Imposta la dimensione del font,
+ il colore oro, lo posiziona nell'area 'timer' della griglia, imposta uno
+ sfondo scuro, un padding, bordi arrotondati, un margine inferiore, larghezza
+ massima e minima e allinea il testo al centro.
+*/
+.timer {
+    font-size: 1.2em;
+    color: gold; /* Cambiato il colore in oro */
+    grid-area: timer; /* Spostato il timer sotto la domanda */
+    background-color: #222; /* Aggiunto sfondo simile alla domanda */
+    padding: 10px; /* Aggiunto padding */
+    border-radius: 25px; /* Aggiunto border-radius */
+    margin-bottom: 20px; /* Aggiunto margine inferiore */
+    max-width: 300px; /* Aggiunto max-width */
+    min-width: 150px; /* Aggiunto min-width */
+    text-align: center; /* Centra il testo */
+
+}
+
+/*
+ Stile per il bottone di azione (es. "Inizia"). Imposta la visualizzazione
+ come inline-block, un padding interno, sfondo blu, colore del testo bianco,
+ rimuove la sottolineatura, imposta bordi arrotondati, aggiunge una transizione
+ per l'effetto hover e lo posiziona nell'area 'bottone' della griglia e allinea
+ il testo al centro.
+*/
+.bottone {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    grid-area: bottone;
+    text-align: center;
+}
+
+/*
+ Stile per l'effetto hover sul bottone, scurisce leggermente lo sfondo.
+*/
+.bottone:hover {
+    background-color: #0056b3;
+}
+
+/*
+ Contenitore per la visualizzazione della scaletta dei premi. Imposta una
+ larghezza fissa, allinea il testo a sinistra e lo posiziona nell'area
+ 'scaletta' della griglia.
+*/
+.scaletta {
+    width: 150px;
+    text-align: left;
+    grid-area: scaletta;
+}
+
+/*
+ Rimuove lo stile predefinito della lista puntata e i margini/padding.
+*/
+.scaletta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ Stile per ogni livello di premio nella scaletta. Imposta un padding interno,
+ uno sfondo scuro, un margine inferiore, bordi arrotondati e una dimensione
+ del font leggermente più piccola.
+*/
+.scaletta li {
+    padding: 8px;
+    background-color: #333;
+    margin-bottom: 3px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/*
+ Stile per il bottone di uscita dal gioco. Lo posiziona in modo fisso nell'angolo
+ in alto a destra, imposta un padding interno, sfondo rosso, colore del testo
+ bianco, rimuove la sottolineatura, imposta bordi arrotondati e uno z-index
+ elevato per assicurarsi che sia sopra altri elementi.
+*/
+.exit-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #ff4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/*
+ Stile per l'effetto hover sul bottone di uscita, scurisce leggermente lo sfondo.
+*/
+.exit-btn:hover {
+    background: #cc0000;
+}
+
+/*
+ Inizialmente nascosto, probabilmente destinato a visualizzare statistiche
+ su dispositivi mobili.
+*/
+.stats-mobile {
+    display: none;
+}
+
+/*
+ Bottone per visualizzare le statistiche su dispositivi mobili. Imposta uno
+ sfondo oro, colore del testo nero, padding interno, bordi arrotondati,
+ margini verticali e lo visualizza come un blocco.
+*/
+.mobile-stats-btn {
+    background: gold;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 15px 0;
+    display: block;
+}
+
+/*
+ Contenitore per le statistiche del gioco. Imposta un bordo, lo visualizza
+ come blocco, imposta bordi arrotondati, un padding interno, margini automatici
+ per centrare, uno sfondo semi-trasparente scuro, una larghezza e una larghezza
+ massima e lo posiziona nell'area 'stats' della griglia.
+*/
+#stats-container {
+    border: 2px solid #61dafb;
+    display: block;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px auto;
+    background: rgba(0, 40, 60, 0.9);
+    width: 90%;
+    max-width: 300px;
+    grid-area: stats;
+}
+
+/*
+ Bottone per accedere alle statistiche. Imposta uno sfondo azzurro, colore
+ del testo scuro, padding interno, bordi arrotondati, rimuove la sottolineatura,
+ lo visualizza come blocco e aggiunge una transizione per l'effetto hover.
+*/
+.stats-btn {
+    background: #61dafb;
+    color: #20232a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+}
+
+/*
+ Stile per l'effetto hover sul bottone delle statistiche, scurisce leggermente
+ lo sfondo e applica una leggera scala.
+*/
+.stats-btn:hover {
+    background: #4fa8d3;
+    transform: scale(1.05);
+}
+
+/*
+ Avviso per gli utenti ospiti. Imposta il colore del testo giallo oro, una
+ dimensione del font leggermente più piccola e un'altezza della linea.
+*/
+.guest-warning {
+    color: #ffd700;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/*
+ Bottone per il login. Imposta uno sfondo verde, colore del testo bianco,
+ padding interno, bordi arrotondati, margini superiori, lo visualizza come
+ inline-block e rimuove la sottolineatura.
+*/
+.btn-login {
+    background: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*
+ Definisce un'animazione che fa pulsare lo sfondo di un elemento da grigio scuro
+ a oro con un'ombra dorata e обратно.
+*/
+@keyframes pulse-gold {
+    0% { background-color: #333; }
+    50% { background-color: gold; box-shadow: 0 0 15px gold; }
+    100% { background-color: #333; }
+}
+
+/*
+ Applica l'animazione pulse-gold e un bordo dorato agli elementi della scaletta
+ che rappresentano il livello corrente.
+*/
+.scaletta li.current-level {
+    animation: pulse-gold 2s infinite;
+    border: 2px solid gold;
+}
+
+/*
+ Modifica il layout per schermi più grandi utilizzando CSS Grid. Ridisegna
+ le aree della griglia per disporre la scaletta a sinistra e la domanda/risposte
+ a destra. Imposta un layout a due colonne. Riposiziona il contenitore delle
+ statistiche in modo statico e lo centra.
+*/
+@media (min-width: 769px) {
+    .container {
+        grid-template-areas:
+            "titolo titolo titolo"
+            "scaletta domanda domanda"
+            "scaletta risposte risposte"
+            "scaletta guadagno timer"
+            "scaletta bottone bottone"
+            "stats stats stats"; /* Nuova area per le stats */
+        grid-template-columns: 1fr 2fr;
+    }
+        
+    #stats-container {
+        position: static;
+        margin: 20px auto;
+    }
+}
+
+/*
+ Modifica il layout per schermi più piccoli utilizzando CSS Grid. Dispone
+ gli elementi in una singola colonna, imposta uno spazio tra gli elementi,
+ aumenta la larghezza del contenitore e aggiunge un padding interno. Modifica
+ le dimensioni del font e i margini per adattarsi a schermi più piccoli.
+ Imposta la larghezza delle risposte a una singola colonna. Centra e ridimensiona
+ gli elementi di guadagno e timer. Imposta il bottone come blocco e ne imposta
+ la larghezza. Imposta la larghezza e il margine della scaletta. Imposta la
+ larghezza del contenitore delle statistiche e dei bottoni di accesso/login
+ al 100% del contenitore.
+*/
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "titolo"
+            "domanda"
+            "risposte"
+            "guadagno"
+            "timer"
+            "bottone"
+            "scaletta"
+            "stats";
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    .domanda {
+        font-size: 1.3em;
+        padding: 20px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .risposte {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .risposta {
+        padding: 15px;
+        font-size: 1.05em;
+    }
+
+    .guadagno,
+    .timer {
+        font-size: 1.1em;
+        padding: 15px;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 300px;
+        min-width: 200px;
+        text-align: center;
+        background-color: #222;
+        border-radius: 20px;
+    }
+
+    .bottone {
+        font-size: 1em;
+        padding: 12px 24px;
+        margin: 15px auto;
+        display: block;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .scaletta {
+        width: 100%;
+        max-width: 320px;
+        margin: 20px auto;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-sizing: border-box;
+    }
+
+    .scaletta li {
+        font-size: 1em;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    #stats-container {
+        margin: 20px auto;
+        text-align: center;
+        display: block;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .stats-btn,
+    .btn-login {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
